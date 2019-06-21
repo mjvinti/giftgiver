@@ -4,7 +4,6 @@ import { Button } from 'react-bootstrap';
 class App extends Component {
   constructor() {
     super();
-
     this.state = { gifts: [] };
   }
 
@@ -20,6 +19,15 @@ class App extends Component {
     return (
       <div>
         <h2>Gift Giver</h2>
+        <div className='gift-list'>
+          {
+            this.state.gifts.map(gift => {
+              return (
+                <div key={gift.id}></div>
+              )
+            })
+          }
+        </div>
         <Button
           className='btn-add'
           onClick={this.addGift}
