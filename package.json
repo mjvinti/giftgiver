@@ -37,6 +37,11 @@
     "react-test-renderer": "^16.8.6"
   },
   "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js",
+      "!src/tempPolyfills.js"
+    ],
     "snapshotSerializers": ["enzyme-to-json/serializer"]
   }
 }
